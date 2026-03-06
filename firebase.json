@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "actflow-8f0ba",
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
