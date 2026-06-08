@@ -1,13 +1,14 @@
 {
   "hosting": {
     "site": "actflow-8f0ba",
-    "public": "public",
+    "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "predeploy": ["npm run build"]
   }
 }
