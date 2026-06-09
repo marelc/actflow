@@ -495,6 +495,30 @@ img {
     gap: 1.2rem;
   }
 
+  .about__photo--anita {
+    order: 1;
+  }
+
+  .about__text--anita {
+    order: 2;
+  }
+
+  .about__photo--marika {
+    order: 3;
+  }
+
+  .about__text--marika {
+    order: 4;
+  }
+
+  .about__photo--together {
+    order: 5;
+  }
+
+  .about__text--together {
+    order: 6;
+  }
+
   .about__header {
     margin-bottom: 1.8rem;
   }

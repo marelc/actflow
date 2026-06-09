@@ -10,11 +10,11 @@ function ONas() {
       </header>
 
       <div className="about__grid">
-        <figure className="about__photo about__photo--portrait">
+        <figure className="about__photo about__photo--portrait about__photo--anita">
           <img src={anitaPhoto} alt="Anita Podlasińska" />
         </figure>
 
-        <article className="about__text">
+        <article className="about__text about__text--anita">
           <h2>Anita Podlasińska</h2>
           <p className="about__lead">
             Psycholożka, literaturoznawczyni, pasjonatka ludzkich opowieści.
@@ -48,7 +48,7 @@ function ONas() {
           </p>
         </article>
 
-        <article className="about__text">
+        <article className="about__text about__text--marika">
           <h2>Marika Malicka</h2>
           <p className="about__lead">
             Psycholożka specjalizująca się w obszarze uzależnień, pasjonatka
@@ -83,7 +83,7 @@ function ONas() {
           </p>
         </article>
 
-        <figure className="about__photo about__photo--portrait">
+        <figure className="about__photo about__photo--portrait about__photo--marika">
           <img src={marikaPhoto} alt="Marika Malicka" />
         </figure>
 
@@ -91,7 +91,7 @@ function ONas() {
           <img src={togetherPhoto} alt="Anita Podlasińska i Marika Malicka" />
         </figure>
 
-        <article className="about__text about__text--center">
+        <article className="about__text about__text--center about__text--together">
           <h2>Jak to się zaczęło?</h2>
           <p>
             Poznałyśmy się dokładnie tam, gdzie bije serce trzeciej fali - na
