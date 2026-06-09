@@ -144,7 +144,7 @@ img {
 .header__inner {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 1rem 1.5rem 1.1rem;
+  padding: 2rem 1.5rem 1.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +169,7 @@ img {
 
 /* Nav tabs — plain text, centered row below the logo */
 .nav {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -288,14 +288,140 @@ img {
   /* matched to the photo width above */
   max-width: var(--hero-width);
   margin-top: 2rem;
+  text-align: left;
+  font-style: normal;
   font-family: var(--font-serif);
-  font-style: italic;
   font-weight: 300;
-  font-size: clamp(1.05rem, 2.4vw, 1.4rem);
-  line-height: 1.9;
-  color: var(--text-soft);
+  font-size: clamp(1.21rem, 2.2vw, 1.485rem);
+  line-height: 1.65;
+  color: var(--text);
   opacity: 0;
   animation: fadeUp 1.2s ease-out 0.6s forwards;
+}
+
+.landing__text h1 {
+  margin-bottom: 1.6rem;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(1.7rem, 2.8vw, 1.95rem);
+  line-height: 1.05;
+  color: var(--text);
+}
+
+.landing__text p {
+  margin: 0;
+}
+
+.landing__text p + p {
+  margin-top: 1.3rem;
+}
+
+.landing__lead {
+  font-weight: 600;
+}
+
+.landing__text strong {
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------------------
+   O nas — alternating photo/text sections
+   --------------------------------------------------------------------------- */
+.about {
+  width: min(1320px, calc(100vw - 3rem));
+  margin-left: 50%;
+  padding: 0.5rem 0 2rem;
+  translate: -50% 0;
+  opacity: 0;
+  animation: fadeUp 1s ease-out 0.1s forwards;
+}
+
+.about__header {
+  text-align: center;
+  margin-bottom: 2.6rem;
+}
+
+.about__header h1 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: clamp(2rem, 3vw, 3rem);
+  row-gap: clamp(3.8rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.about__photo,
+.about__text {
+  min-height: 0;
+}
+
+.about__photo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about__photo--portrait img {
+  max-width: 620px;
+}
+
+.about__photo--together img {
+  max-width: 600px;
+}
+
+.about__photo:nth-of-type(2n) {
+  justify-self: end;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: clamp(1.242rem, 1.5525vw, 1.426rem);
+  line-height: 1.62;
+  color: var(--text-soft);
+}
+
+.about__text--center {
+  text-align: center;
+}
+
+.about__text h2 {
+  margin-bottom: 0.65rem;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.about__lead {
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.about__text p {
+  margin: 0;
+}
+
+.about__text p + p {
+  margin-top: 1rem;
+}
+
+.about__text strong {
+  font-weight: 600;
+  color: var(--text);
 }
 
 /* ---------------------------------------------------------------------------
@@ -348,7 +474,7 @@ img {
    --------------------------------------------------------------------------- */
 @media (max-width: 600px) {
   .header__inner {
-    padding: 0.8rem 1rem 0.9rem;
+    padding: 1.6rem 1rem 0.9rem;
   }
 
   .nav {
@@ -362,6 +488,30 @@ img {
 
   .main {
     padding: 2rem 1.2rem 3rem;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .about__header {
+    margin-bottom: 1.8rem;
+  }
+
+  .about__photo,
+  .about__text {
+    min-height: auto;
+  }
+
+  .about__photo img {
+    max-width: 100%;
+    min-height: 320px;
+  }
+
+  .about__text {
+    font-size: 1.05rem;
+    line-height: 1.6;
   }
 }
 

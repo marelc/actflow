@@ -18,11 +18,24 @@ function Landing() {
         />
       </figure>
 
-      <p className="landing__text">
-        Tu pojawi się kilka zdań wprowadzających — o tym, kim jesteśmy
-        i co znajdziesz na ActFlow. Tekst dopasowany szerokością do zdjęcia
-        powyżej.
-      </p>
+      <div className="landing__text">
+        <h1>ACT Flow – Znajdź swój terapeutyczny rytm</h1>
+
+        <p className="landing__lead">
+          Szkolenia ACT i mentoring dla młodych psychologów oraz specjalistów,
+          którzy chcą rozwijać skrzydła w nurcie trzeciej fali.
+        </p>
+
+        <p>
+          Pomagamy przekuć teorię w płynną, skuteczną praktykę gabinetową.
+          Niezależnie od tego, czy stawiasz pierwsze kroki w zawodzie, czy
+          chcesz wzbogacić swój warsztat o Terapię Akceptacji i Zaangażowania –
+          znajdziesz tu narzędzia, wiedzę i wsparcie. <strong>Stawiamy na
+          relację i spotkania na żywo</strong>, bo wierzymy, że w bezpośrednim
+          kontakcie uczymy się najlepiej. Połącz naukowe standardy z ludzką
+          autentycznością i złap swój zawodowy <em>flow</em>.
+        </p>
+      </div>
     </section>
   );
 }
