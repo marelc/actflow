@@ -19,6 +19,7 @@ function App() {
           <Route path="/o-nas" element={<ONas />} />
           <Route path="/dlaczego-act" element={<DlaczegoAct />} />
           <Route path="/szkolenia-i-warsztaty" element={<Szkolenia />} />
+          <Route path="/szkolenia-i-warsztaty/:slug" element={<Szkolenia />} />
           <Route path="/mentoring" element={<Mentoring />} />
           <Route path="/artykuly" element={<Artykuly />} />
           <Route path="/kontakt" element={<Kontakt />} />
