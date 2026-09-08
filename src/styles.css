@@ -1096,6 +1096,238 @@ img {
   margin-top: 1.5rem;
 }
 
+/* Mentoring — long-form text with a sticky photographic interlude */
+.mentoring {
+  width: min(1120px, calc(100vw - 3rem));
+  margin-inline: auto;
+  padding: 0.5rem 0 3rem;
+  font-family: var(--font-serif);
+  color: var(--text-soft);
+}
+
+.mentoring__reading-column {
+  width: min(100%, 820px);
+  margin-inline: auto;
+}
+
+.mentoring__hero {
+  padding: clamp(1rem, 4vw, 3rem) 0 clamp(3.5rem, 8vw, 6rem);
+  opacity: 0;
+  animation: fadeUp 1s ease-out 0.1s forwards;
+}
+
+.mentoring__eyebrow {
+  margin-bottom: 0.9rem !important;
+  font-family: var(--font-sans);
+  font-size: 0.72rem !important;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mentoring h1,
+.mentoring h2,
+.mentoring h3 {
+  color: var(--text);
+}
+
+.mentoring h1 {
+  max-width: 780px;
+  margin-bottom: 2rem;
+  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.mentoring h2 {
+  margin-bottom: 1.4rem;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.mentoring h3 {
+  margin-bottom: 1.3rem;
+  font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.mentoring p,
+.mentoring li,
+.mentoring dd {
+  font-size: clamp(1.15rem, 1.65vw, 1.34rem);
+  line-height: 1.66;
+}
+
+.mentoring p + p {
+  margin-top: 1.25rem;
+}
+
+.mentoring strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.mentoring__intro {
+  padding-left: clamp(1.25rem, 3vw, 2.2rem);
+  border-left: 1px solid var(--line);
+  font-size: clamp(1.3rem, 2.1vw, 1.62rem) !important;
+  line-height: 1.55 !important;
+  color: var(--text);
+}
+
+.mentoring__section {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  border-top: 1px solid rgba(192, 181, 168, 0.5);
+}
+
+.mentoring__approaches {
+  margin: 2.5rem 0;
+  list-style: none;
+  border-top: 1px solid rgba(192, 181, 168, 0.42);
+}
+
+.mentoring__approaches li {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 1.4rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(192, 181, 168, 0.42);
+}
+
+.mentoring__approaches li > span {
+  padding-top: 0.22rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--text);
+}
+
+.mentoring__approaches p {
+  margin: 0;
+}
+
+.mentoring__photo-stage {
+  position: relative;
+  width: 100vw;
+  height: clamp(30rem, 70svh, 48rem);
+  margin: 0 0 0 calc(50% - 50vw);
+  background-color: #e5e1dc;
+  background-attachment: fixed;
+  background-position: center calc(50% + 75px);
+  background-repeat: no-repeat;
+  background-size: auto calc(100svh - var(--header-h) - 2rem);
+  box-shadow:
+    inset 0 1px rgba(74, 67, 64, 0.08),
+    inset 0 -1px rgba(74, 67, 64, 0.08);
+}
+
+.mentoring__photo-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(30, 25, 20, 0.03), transparent 35%, rgba(30, 25, 20, 0.08));
+  pointer-events: none;
+}
+
+.mentoring__photo-stage figcaption {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1rem;
+  z-index: 1;
+  max-width: min(30rem, calc(100% - 2.4rem));
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-align: right;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.38);
+}
+
+.mentoring__support {
+  border-top: 0;
+}
+
+.mentoring__support-block {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: 2.6rem 0;
+  border-top: 1px solid rgba(192, 181, 168, 0.48);
+}
+
+.mentoring__number {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  color: rgba(154, 142, 132, 0.62);
+}
+
+.mentoring__support-block ul {
+  padding-left: 1.15rem;
+}
+
+.mentoring__support-block li {
+  padding-left: 0.35rem;
+}
+
+.mentoring__support-block li + li {
+  margin-top: 1rem;
+}
+
+.mentoring__details {
+  border-top: 1px solid rgba(192, 181, 168, 0.5);
+}
+
+.mentoring__details > div {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid rgba(192, 181, 168, 0.5);
+}
+
+.mentoring__details dt {
+  padding-top: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.mentoring__closing {
+  padding: clamp(3.5rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4.5rem);
+  background: rgba(210, 195, 175, 0.2);
+  text-align: center;
+}
+
+.mentoring__cta {
+  display: inline-block;
+  margin-top: 2.2rem;
+  padding: 0.9rem 1.5rem 0.8rem;
+  border: 1px solid var(--line);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.mentoring__cta:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
 /* ---------------------------------------------------------------------------
    Inner pages (stubs for now) — simple centered heading
    --------------------------------------------------------------------------- */
@@ -1377,6 +1609,55 @@ img {
   .article-detail__body h2 {
     margin-top: 2.8rem;
   }
+
+  .mentoring {
+    width: min(100%, calc(100vw - 2.4rem));
+  }
+
+  .mentoring__hero {
+    padding-top: 0.5rem;
+  }
+
+  .mentoring h1 {
+    font-size: clamp(2.45rem, 13vw, 3.55rem);
+  }
+
+  .mentoring p,
+  .mentoring li,
+  .mentoring dd {
+    font-size: 1.1rem;
+  }
+
+  .mentoring__approaches li {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .mentoring__photo-stage {
+    height: 48svh;
+    min-height: 22rem;
+    background-position: center calc(50% + 70px);
+    background-size: 100vw auto;
+  }
+
+  .mentoring__photo-stage figcaption {
+    right: 1rem;
+    bottom: 0.8rem;
+    max-width: calc(100% - 2rem);
+  }
+
+  .mentoring__support-block {
+    grid-template-columns: 1fr;
+  }
+
+  .mentoring__details > div {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .mentoring__closing {
+    padding-inline: 1.2rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1387,4 +1668,8 @@ img {
     transition: none !important;
   }
   html { scroll-behavior: auto; }
+
+  .mentoring__photo-stage {
+    background-attachment: scroll;
+  }
 }
