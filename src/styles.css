@@ -39,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -47,6 +48,7 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -1234,22 +1236,6 @@ img {
   pointer-events: none;
 }
 
-.mentoring__photo-stage figcaption {
-  position: absolute;
-  right: 1.2rem;
-  bottom: 1rem;
-  z-index: 1;
-  max-width: min(30rem, calc(100% - 2.4rem));
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-align: right;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.38);
-}
-
 .mentoring__support {
   border-top: 0;
 }
@@ -1638,12 +1624,6 @@ img {
     min-height: 22rem;
     background-position: center calc(50% + 70px);
     background-size: 100vw auto;
-  }
-
-  .mentoring__photo-stage figcaption {
-    right: 1rem;
-    bottom: 0.8rem;
-    max-width: calc(100% - 2rem);
   }
 
   .mentoring__support-block {

@@ -75,9 +75,7 @@ function Mentoring() {
         role="img"
         aria-label="Anita i Marika siedzące razem na zielonej sofie"
         style={{ backgroundImage: `url(${mentoringPhoto})` }}
-      >
-        <figcaption>Wsparcie oparte na relacji, ciekawości i praktyce</figcaption>
-      </figure>
+      />
 
       <section className="mentoring__section mentoring__reading-column mentoring__support">
         <p className="mentoring__eyebrow">Praktyczne wsparcie</p>
