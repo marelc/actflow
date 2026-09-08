@@ -75,7 +75,14 @@ function Mentoring() {
         role="img"
         aria-label="Anita i Marika siedzące razem na zielonej sofie"
         style={{ backgroundImage: `url(${mentoringPhoto})` }}
-      />
+      >
+        <img
+          className="mentoring__mobile-photo"
+          src={mentoringPhoto}
+          alt=""
+          aria-hidden="true"
+        />
+      </figure>
 
       <section className="mentoring__section mentoring__reading-column mentoring__support">
         <p className="mentoring__eyebrow">Praktyczne wsparcie</p>

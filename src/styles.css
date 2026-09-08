@@ -1236,6 +1236,10 @@ img {
   pointer-events: none;
 }
 
+.mentoring__mobile-photo {
+  display: none;
+}
+
 .mentoring__support {
   border-top: 0;
 }
@@ -1357,6 +1361,22 @@ img {
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mentoringMobileReveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    transform: scale(1.025);
+  }
+  24%,
+  76% {
+    clip-path: inset(0);
+    transform: scale(1);
+  }
+  100% {
+    clip-path: inset(100% 0 0 0);
+    transform: scale(1.025);
+  }
 }
 
 /* ---------------------------------------------------------------------------
@@ -1620,10 +1640,37 @@ img {
   }
 
   .mentoring__photo-stage {
-    height: 48svh;
-    min-height: 22rem;
-    background-position: center calc(50% + 70px);
-    background-size: 100vw auto;
+    height: auto;
+    min-height: 0;
+    overflow: clip;
+    background-image: none !important;
+    background-color: transparent;
+    background-attachment: scroll;
+    box-shadow: none;
+  }
+
+  .mentoring__photo-stage::after {
+    display: none;
+  }
+
+  .mentoring__mobile-photo {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center center;
+    background: transparent;
+  }
+
+  @supports (animation-timeline: view()) {
+    .mentoring__mobile-photo {
+      animation: mentoringMobileReveal linear both;
+      animation-timeline: view(block);
+      animation-range: entry 0% exit 100%;
+      will-change: clip-path, transform;
+    }
   }
 
   .mentoring__support-block {
@@ -1652,4 +1699,5 @@ img {
   .mentoring__photo-stage {
     background-attachment: scroll;
   }
+
 }
