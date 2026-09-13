@@ -392,12 +392,6 @@ img {
   content: 'M';
 }
 
-.contact__number {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  color: var(--text-faint);
-}
-
 .contact__person h2 {
   position: relative;
   display: inline-block;

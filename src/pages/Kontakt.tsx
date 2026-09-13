@@ -53,7 +53,6 @@ function Kontakt() {
 
       <div className="contact__people">
         <article className="contact__person">
-          <p className="contact__number">01</p>
           <h2>Anita</h2>
           <div className="contact__links">
             <a href="tel:+48504773409"><PhoneIcon />+48 504 773 409</a>
@@ -70,7 +69,6 @@ function Kontakt() {
         </article>
 
         <article className="contact__person">
-          <p className="contact__number">02</p>
           <h2>Marika</h2>
           <div className="contact__links">
             <a href="tel:+48577776736"><PhoneIcon />+48 577 776 736</a>
