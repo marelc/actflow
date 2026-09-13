@@ -3,12 +3,10 @@
  * Lives at the bottom of the page flow, so on short pages it's only
  * seen once you scroll down.
  *
- * TODO: replace the placeholder text and the "#" social URLs once available.
+ * Facebook stays visible as a placeholder until the profile is available.
  */
 
-// Placeholder links — swap "#" for the real profile URLs.
-const INSTAGRAM_URL = '#';
-const FACEBOOK_URL = '#';
+const INSTAGRAM_URL = 'https://www.instagram.com/actflow.pl';
 
 function Footer() {
   return (
@@ -34,17 +32,16 @@ function Footer() {
           </svg>
         </a>
 
-        <a
-          href={FACEBOOK_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
+        <span
+          className="footer__social-disabled"
+          aria-label="Facebook — wkrótce"
+          title="Facebook — wkrótce"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"
             strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
           </svg>
-        </a>
+        </span>
       </div>
     </footer>
   );
