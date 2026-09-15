@@ -73,6 +73,14 @@ function Kontakt() {
           <div className="contact__links">
             <a href="tel:+48577776736"><PhoneIcon />+48 577 776 736</a>
             <a href="mailto:marika@actflow.pl"><MailIcon />marika@actflow.pl</a>
+            <a
+              href="https://wa.me/48577776736"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Napisz do Mariki na WhatsApp"
+            >
+              <WhatsAppIcon />WhatsApp
+            </a>
           </div>
         </article>
       </div>

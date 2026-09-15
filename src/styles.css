@@ -296,22 +296,10 @@ img {
 }
 
 .contact__header h1 {
-  position: relative;
-  display: inline-block;
   font-family: var(--font-serif);
   font-size: clamp(2.7rem, 7vw, 4.5rem);
   font-weight: 400;
   line-height: 1;
-}
-
-.contact__header h1::after {
-  content: '';
-  position: absolute;
-  right: -2.4rem;
-  bottom: 0.3rem;
-  width: 1.8rem;
-  height: 1px;
-  background: var(--line);
 }
 
 .contact__header > p:not(.contact__eyebrow) {
@@ -393,22 +381,10 @@ img {
 }
 
 .contact__person h2 {
-  position: relative;
-  display: inline-block;
   margin: 0.2rem 0 1rem;
   font-family: var(--font-serif);
   font-size: clamp(2rem, 5vw, 2.8rem);
   font-weight: 400;
-}
-
-.contact__person h2::after {
-  content: '';
-  position: absolute;
-  right: -1.5rem;
-  bottom: 0.25rem;
-  width: 1rem;
-  height: 1px;
-  background: rgba(154, 142, 132, 0.62);
 }
 
 .contact__links {
@@ -1626,18 +1602,42 @@ img {
   }
 
   .contact__people::after {
-    top: 50%;
-    right: 8%;
-    bottom: auto;
-    left: 8%;
-    width: auto;
+    display: none;
+  }
+
+  .contact__person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+    overflow: hidden;
+    padding: 1.5rem 1.5rem 1.75rem;
+    text-align: center;
+  }
+
+  .contact__person:first-child::before {
+    content: '';
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    left: 5%;
     height: 1px;
     background: linear-gradient(to right, transparent, rgba(192, 181, 168, 0.58) 22%, rgba(192, 181, 168, 0.58) 78%, transparent);
   }
 
-  .contact__person {
-    min-height: 0;
-    padding: 1.5rem;
+  .contact__person::after {
+    right: 50%;
+    bottom: 0.02em;
+    font-size: 7rem;
+    color: rgba(154, 142, 132, 0.08);
+    transform: translateX(50%);
+  }
+
+  .contact__links {
+    width: max-content;
+    max-width: 100%;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .contact__links a {
