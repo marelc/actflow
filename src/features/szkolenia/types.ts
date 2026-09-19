@@ -1,12 +1,22 @@
 export type TrainingStatus = 'current' | 'completed';
 
+export interface TrainingDate {
+  date: string;
+  note?: string;
+}
+
+export interface TrainingEdition {
+  label: string;
+  date?: string;
+  images: string[];
+}
+
 interface TrainingBase {
   slug: string;
   status: TrainingStatus;
   title: string;
   shortDescription: string;
   thumbnail: string;
-  gallery: string[];
   description: string[];
   format: string;
   place: string;
@@ -14,22 +24,20 @@ interface TrainingBase {
 
 export interface CurrentTraining extends TrainingBase {
   status: 'current';
-  date: string;
-  enrollmentDeadline: string;
+  dates: TrainingDate[];
   price: string;
   duration: string;
   availableSeats: string;
+  learningOutcomes: string[];
   program: string[];
-  forWhom: string[];
+  forWhom: string;
+  included: string[];
   registrationNote: string;
 }
 
 export interface CompletedTraining extends TrainingBase {
   status: 'completed';
-  dateLabel: string;
-  participantCount: string;
-  topics: string[];
-  afterword: string;
+  editions: TrainingEdition[];
 }
 
 export type Training = CurrentTraining | CompletedTraining;

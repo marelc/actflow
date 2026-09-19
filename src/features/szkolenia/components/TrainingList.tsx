@@ -6,6 +6,12 @@ interface TrainingListProps {
   trainings: Training[];
 }
 
+function editionLabel(count: number) {
+  if (count === 1) return '1 edycja';
+  if (count >= 2 && count <= 4) return `${count} edycje`;
+  return `${count} edycji`;
+}
+
 function TrainingList({ trainings }: TrainingListProps) {
   return (
     <div className="training-list" aria-live="polite">
@@ -28,15 +34,17 @@ function TrainingList({ trainings }: TrainingListProps) {
             <div className="training-list__meta">
               {training.status === 'current' ? (
                 <>
-                  <span>{training.date}</span>
+                  <span>
+                    {training.dates.map(({ date, note }) =>
+                      note ? `${date} (${note})` : date,
+                    ).join(' · ')}
+                  </span>
                   <span>{training.price}</span>
-                  <span>zapisy do {training.enrollmentDeadline}</span>
                 </>
               ) : (
                 <>
-                  <span>{training.dateLabel}</span>
+                  <span>{editionLabel(training.editions.length)}</span>
                   <span>{training.place}</span>
-                  <span>{training.participantCount}</span>
                 </>
               )}
             </div>

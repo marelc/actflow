@@ -38,9 +38,8 @@ function Szkolenia() {
       <header className="trainings__header">
         <h1>Szkolenia i warsztaty</h1>
         <p>
-          Miejsce na aktualne zapisy oraz archiwum spotkań, które już się odbyły.
-          Każde szkolenie ma osobny opis i galerię, a nowe pozycje dodaje się w
-          jednym pliku danych.
+          Aktualne warsztaty oraz archiwum spotkań, które już się odbyły.
+          Wybierz szkolenie, aby poznać program, terminy i szczegóły zapisów.
         </p>
       </header>
 

@@ -6,7 +6,9 @@ interface ArticleDetailProps { article: Article }
 function ArticleDetail({ article }: ArticleDetailProps) {
   return (
     <article className="article-detail">
-      <Link className="article-detail__back" to="/artykuly">Powrót do artykułów</Link>
+      <Link className="article-detail__back" to="/artykuly">
+        <span aria-hidden="true">←</span> Powrót do artykułów
+      </Link>
       <header className="article-detail__header">
         <p>ACT Flow · {article.readingMinutes} min czytania</p>
         <h1>{article.title}</h1>

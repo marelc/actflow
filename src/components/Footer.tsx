@@ -1,10 +1,4 @@
-/**
- * Footer: a short line or two of text + Instagram & Facebook links.
- * Lives at the bottom of the page flow, so on short pages it's only
- * seen once you scroll down.
- *
- * Facebook stays visible as a placeholder until the profile is available.
- */
+/** Footer text and the active Instagram profile. */
 
 const INSTAGRAM_URL = 'https://www.instagram.com/actflow.pl';
 
@@ -32,16 +26,6 @@ function Footer() {
           </svg>
         </a>
 
-        <span
-          className="footer__social-disabled"
-          aria-label="Facebook — wkrótce"
-          title="Facebook — wkrótce"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"
-            strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-          </svg>
-        </span>
       </div>
     </footer>
   );
