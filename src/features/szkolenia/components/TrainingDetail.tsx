@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import type { TouchEvent } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 
 import type { Training } from '../types';
@@ -15,6 +17,7 @@ interface LightboxState {
 
 function TrainingDetail({ training }: TrainingDetailProps) {
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -50,6 +53,21 @@ function TrainingDetail({ training }: TrainingDetailProps) {
       const index = (current.index + direction + current.images.length) % current.images.length;
       return { ...current, index };
     });
+  }
+
+  function handleTouchStart(event: TouchEvent) {
+    touchStartX.current = event.touches[0]?.clientX ?? null;
+  }
+
+  function handleTouchEnd(event: TouchEvent) {
+    if (touchStartX.current === null || !lightbox || lightbox.images.length < 2) return;
+    const touchEndX = event.changedTouches[0]?.clientX;
+    if (touchEndX === undefined) return;
+
+    const distance = touchEndX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(distance) < 50) return;
+    changeLightboxImage(distance > 0 ? -1 : 1);
   }
 
   const metaItems: Array<[string, string]> =
@@ -193,25 +211,18 @@ function TrainingDetail({ training }: TrainingDetailProps) {
         )}
       </div>
 
-      {lightbox && (
+      {lightbox && createPortal(
         <div
           className="training-lightbox"
           role="dialog"
           aria-modal="true"
           aria-label="Powiększone zdjęcie ze szkolenia"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) setLightbox(null);
           }}
         >
-          <button
-            className="training-lightbox__close"
-            type="button"
-            onClick={() => setLightbox(null)}
-            aria-label="Zamknij podgląd"
-          >
-            ×
-          </button>
-
           {lightbox.images.length > 1 && (
             <button
               className="training-lightbox__previous"
@@ -224,6 +235,14 @@ function TrainingDetail({ training }: TrainingDetailProps) {
           )}
 
           <figure className="training-lightbox__figure">
+            <button
+              className="training-lightbox__close"
+              type="button"
+              onClick={() => setLightbox(null)}
+              aria-label="Zamknij podgląd"
+            >
+              ×
+            </button>
             <img
               src={lightbox.images[lightbox.index]}
               alt={`${lightbox.label}, zdjęcie ${lightbox.index + 1}`}
@@ -245,7 +264,8 @@ function TrainingDetail({ training }: TrainingDetailProps) {
               ›
             </button>
           )}
-        </div>
+        </div>,
+        document.body,
       )}
     </section>
   );
