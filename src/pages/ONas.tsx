@@ -39,7 +39,7 @@ function ONas() {
             neurotypowym świecie.
           </p>
           <p>
-            <strong>W ACT Flow chcę pokazać Ci, że</strong> dobra terapia nie
+            W ACT Flow chcę pokazać Ci, że dobra terapia nie
             polega na sztywnym trzymaniu się procedur. W modelach ACT i FAP
             najbardziej cenię autentyczną, żywą relację. Podczas naszych spotkań
             na żywo nauczę Cię, jak z lekkością i odwagą korzystać z narzędzi
@@ -73,7 +73,7 @@ function ONas() {
             najtrudniejszych emocji i myśli.
           </p>
           <p>
-            <strong>W ACT Flow chcę pokazać Ci, że</strong> skuteczna terapia
+            W ACT Flow chcę pokazać Ci, że skuteczna terapia
             opiera się na głębokim zrozumieniu człowieka, a nie na sztywnych
             schematach z podręcznika. Moją pasją jest uczenie myślenia
             procesowego oraz analizy funkcjonalnej zachowania. Podczas naszych
